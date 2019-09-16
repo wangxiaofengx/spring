@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="commons-logging-1.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/boot/src/main/resources/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/boot/src/main/resources/lib/epoint-ipaas-sdk-9.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/boot/src/main/resources/lib/epoint-sso-authenticator-9.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/boot/src/main/resources/lib/epoint-utils-9.3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/boot/src/main/resources/lib/httpclient-4.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/boot/src/main/resources/lib/httpcore-4.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/boot/src/main/resources/lib/httpmime-4.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/boot/src/main/resources/lib/log4j-1.2.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

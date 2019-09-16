@@ -1,0 +1,34 @@
+server:
+  port: 8090
+gt:
+  appId: 'DmJSsKKRVj7G77ZwaH9Fv'
+  appKey: 'JEx6R8rv0z5Ro9icooq1m3'
+  masterSecret: '1TYA9PGtbB9TY9TpDdTMj1'
+  url: 'http://sdk.open.api.igexin.com/apiex.htm'
+  host: 'http://222.143.38.161:8080/dzzw'
+notice:
+  server:
+    url: 'http://222.143.38.162/dzzwpc/oa/pull/gt/data,http://222.143.38.162/app/oa/pull/gt/data'
+
+
+sms:
+  server:
+    url: 'http://16.99.105.4:20007/share/ydsms'
+  ecName: '郑州市数字城市办公室'
+  apId: 'zrghj1'
+  secretKey: 'Zr%1243000'
+  sign : 'XwkDRaoiG'
+  getmsgUrl: 'http://172.16.103.91:8088/dzzw/oa/pull/sms/data'
+  #
+  #  #sms:
+  #  server:
+  #    url: 'http://222.143.38.162/ywsp/oa/pull/sms/data'
+  #  templateId: 'SMS_173346870'
+  #  freeSignName: '郑州市不动产'
+##日志
+#
+logging:
+  level:
+    root: debug
+
+
