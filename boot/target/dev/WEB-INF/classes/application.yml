@@ -1,0 +1,25 @@
+server:
+  port: 8090
+##日志
+logging:
+  level:
+    root: info
+spring:
+  elasticsearch:
+    rest:
+      uris: http://192.168.1.200:9200
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.200/boot?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE
+    username: root
+    password: 123456
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      dialect: org.hibernate.dialect.MySQL5Dialect
+mybatis:
+  mapperLocations: classpath*:com/mrwang/**/*.xml
+  typeAliasesPackage: tk.mapper.model
