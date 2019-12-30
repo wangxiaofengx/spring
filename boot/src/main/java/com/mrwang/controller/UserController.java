@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController("user")
+@RestController()
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
