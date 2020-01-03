@@ -1,6 +1,36 @@
 server:
-  port: 9000
+  port: 9090
 ##日志
 logging:
   level:
-    root: debug
+    root: info
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://129.226.132.228/boot?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE
+    username: root
+    password: wangxiaofeng
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      dialect: org.hibernate.dialect.MySQL5Dialect
+  session:
+    store-type: redis
+  redis:
+    database: 0
+    host: 129.226.132.228
+    port: 6379
+    timeout: 6000
+    password: wangxiaofeng
+    jedis:
+      pool:
+        max-wait:
+        min-idle: 0
+        max-idle: 8
+        max-active: 8
+mybatis:
+  mapperLocations: classpath*:com/mrwang/mapper/*.xml
+  typeAliasesPackage: tk.mapper.model

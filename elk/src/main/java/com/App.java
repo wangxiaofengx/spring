@@ -1,6 +1,6 @@
 package com;
 
-import com.boot.config.CustomBanner;
+import com.elk.config.CustomBanner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
