@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <contextName>logback</contextName>
+    <contextName></contextName>
     <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
 <!--    <property name="LOG_HOME" value="/home" />-->
     <!--输出到控制台-->
@@ -60,8 +60,8 @@
     </appender>
 
     <root level="debug">
-        <appender-ref ref="kafkaAppender"/>
+<!--        <appender-ref ref="kafkaAppender"/>-->
         <appender-ref ref="console" />
-        <appender-ref ref="file" />
+<!--        <appender-ref ref="file" />-->
     </root>
 </configuration>
