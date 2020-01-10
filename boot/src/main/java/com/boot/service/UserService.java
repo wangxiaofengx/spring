@@ -12,13 +12,14 @@ import java.util.List;
 @Service
 public class UserService {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(UserService.class);
 
     @Resource
     UserMapper userMapper;
 
     public List<User> list() {
-
-        return userMapper.list();
+        logger.info("--------------------------------------------------------");
+        throw new RuntimeException("开始抛异常");
+        //return userMapper.list();
     }
 }
