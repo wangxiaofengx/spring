@@ -1,0 +1,28 @@
+server:
+  port: 9090
+##日志
+logging:
+  level:
+    root: info
+spring:
+  data:
+    mongodb:
+      uri: mongodb://192.168.1.200/test
+  session:
+    store-type: redis
+  redis:
+    database: 0
+    host: 129.226.132.228
+    port: 6379
+    timeout: 6000
+    password: wangxiaofeng
+    jedis:
+      pool:
+        max-wait:
+        min-idle: 0
+        max-idle: 8
+        max-active: 8
+
+mybatis:
+  mapperLocations: classpath*:com/mrwang/mapper/*.xml
+  typeAliasesPackage: tk.mapper.model

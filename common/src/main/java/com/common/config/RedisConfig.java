@@ -1,4 +1,4 @@
-package com.boot.config;
+package com.common.config;
 
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 

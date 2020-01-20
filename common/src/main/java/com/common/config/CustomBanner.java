@@ -1,4 +1,4 @@
-package com.boot.config;
+package com.common.config;
 
 import org.springframework.core.env.Environment;
 
