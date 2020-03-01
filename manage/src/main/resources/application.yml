@@ -22,7 +22,3 @@ spring:
         min-idle: 0
         max-idle: 8
         max-active: 8
-
-mybatis:
-  mapperLocations: classpath*:com/mrwang/mapper/*.xml
-  typeAliasesPackage: tk.mapper.model

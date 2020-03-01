@@ -1,7 +1,7 @@
 package com.common.config;
 
-import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
+import org.springframework.context.annotation.Configuration;
 
-@EnableRedisHttpSession
+@Configuration
 public class RedisConfig {
 }
