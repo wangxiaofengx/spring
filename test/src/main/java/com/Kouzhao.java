@@ -43,30 +43,9 @@ public class Kouzhao {
         Kouzhao kouzhao = new Kouzhao();
 
         List<MultiValueMap<String, String>> xinzheng = new ArrayList<>();
-        xinzheng.add(loadMInfo("魏留玉", "41010419740717503X", "13592471691"));
-        xinzheng.add(loadMInfo("魏亚贤", "410104199710090062", "15565130887"));
-        xinzheng.add(loadMInfo("魏彩倩", "410104200101180105", "19937088059"));
-        xinzheng.add(loadMInfo("魏雅倩", "410104200007200069", "15093202047"));
-        xinzheng.add(loadMInfo("张俊红", "410104197805265022", "17788101163"));
-        xinzheng.add(loadMInfo("王坡妮", "410104193711085022", "19937035632"));
+        xinzheng.add(loadMInfo("xxxxxxxxx", "xxxxxxxxxx", "xxxxxx"));
         kouzhao.execute(new String[]{"1007", "1028"}, xinzheng);
 
-
-//        List<MultiValueMap<String, String>> jinshui = new ArrayList<>();
-//        jinshui.add(loadMInfo("赵丹", "41010419910828012X", "18539973624"));
-//        kouzhao2.execute(new String[]{"365", "377", "353"}, jinshui);
-
-//        List<MultiValueMap<String, String>> guancheng = new ArrayList<>();
-//        guancheng.add(loadMInfo("王霞菲", "410482199005061085", "13384008703"));
-//        kouzhao2.execute(new String[]{"463"}, guancheng);
-
-
-//        List<MultiValueMap<String, String>> wang = new ArrayList<>();
-//        wang.add(loadMInfo("陈娟娟", "41018519710106356X", "15838260722"));
-//        wang.add(loadMInfo("王琪锋", "410185200206013555", "15838260722"));
-//        wang.add(loadMInfo("王新军", "410125197104033511", "15936290766"));
-//        kouzhao2.execute(new String[]{"569", "615",
-//                "617", "618", "640", "641", "642", "650", "651", "652", "1023"}, wang);
     }
 
 
