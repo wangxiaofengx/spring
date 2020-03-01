@@ -45,7 +45,7 @@ public class Kouzhao {
         List<MultiValueMap<String, String>> xinzheng = new ArrayList<>();
         xinzheng.add(loadMInfo("xxxxxxxxx", "xxxxxxxxxx", "xxxxxx"));
         kouzhao.execute(new String[]{"1007", "1028"}, xinzheng);
-
+ 
     }
 
 
