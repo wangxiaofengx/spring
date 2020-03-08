@@ -178,7 +178,13 @@ function RTCPeerConnectionWrapper(localUserId, remoteUserId, localStream) {
 }
 
 RTCPeerConnectionWrapper.prototype.create = function (stream) {
-    var pc = new RTCPeerConnection(null);
+    var configuration = {
+        'iceServers': [
+            {'url': 'stun:124.156.181.219'},
+            {'url': 'turn:124.156.181.219', username: 'turnserver', credential: '123456'}
+        ]
+    };
+    var pc = new RTCPeerConnection(configuration);
     pc.onicecandidate = this.handleIceCandidate.bind(this);
     pc.onaddstream = this.handleRemoteStreamAdded.bind(this);
     pc.onremovestream = this.handleRemoteStreamRemoved.bind(this);

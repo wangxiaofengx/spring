@@ -57,12 +57,11 @@ public class RtcHandler {
         }
 
         log.info("用户连接:" + userId + ",当前在线人数为:" + getOnlineCount());
-
-//        try {
-//            sendMessage("连接成功");
-//        } catch (IOException e) {
-//            log.error("用户:" + userId + ",网络异常!!!!!!");
-//        }
+        try {
+            sendMessage("{\"event\":\"open\",\"message\":" + getOnlineCount() + "}");
+        } catch (IOException e) {
+            log.error("用户:" + userId + ",网络异常!!!!!!");
+        }
     }
 
     /**
@@ -85,13 +84,16 @@ public class RtcHandler {
      */
     @OnMessage
     public void onMessage(String message, Session session) {
+        RtcHandler that = this;
         log.info("用户消息:" + userId + ",报文:" + message);
         //可以群发消息
         //消息保存到数据库、redis
         if (StringUtils.isNotBlank(message)) {
             webSocketMap.forEach((k, y) -> {
                 try {
-                    y.sendMessage(message);
+                    if (y != that) {
+                        y.sendMessage(message);
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

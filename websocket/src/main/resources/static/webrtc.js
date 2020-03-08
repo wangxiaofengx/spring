@@ -50,12 +50,20 @@ function onLogin(name) {
 
     //creating our RTCPeerConnection object
 
+    // var configuration = {
+    //     "iceServers": [{"url": "stun:stun.1.google.com:19302"}]
+    // };
+
     var configuration = {
-        "iceServers": [{"url": "stun:stun.1.google.com:19302"}]
+        'iceServers': [
+            {'url': 'stun:124.156.181.219'},
+            {'url': 'turn:124.156.181.219', username: 'turnserver', credential: '123456'}
+        ]
     };
 
+
     if (peerConnections[name] == null) {
-        peerConnections[name] = new RTCPeerConnection(null);
+        peerConnections[name] = new RTCPeerConnection(configuration);
     }
 
     console.log("RTCPeerConnection object was created");
