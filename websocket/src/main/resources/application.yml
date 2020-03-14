@@ -1,10 +1,10 @@
 server:
-  port: 8080
-  ssl:
-    keyStore: d:/keystore.p12
-    keyStorePassword: 123456
-    keyStoreType: PKCS12
-    keyAlias: tomcat
+  port: 9090
+#  ssl:
+#    keyStore: d:/keystore.p12
+#    keyStorePassword: 123456
+#    keyStoreType: PKCS12
+#    keyAlias: tomcat
 logging:
   level:
     root: info
