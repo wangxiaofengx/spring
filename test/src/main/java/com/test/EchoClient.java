@@ -12,6 +12,7 @@ import io.netty.handler.stream.ChunkedWriteHandler;
 import java.net.InetSocketAddress;
 import java.nio.charset.Charset;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class EchoClient {
 
@@ -56,30 +57,30 @@ public class EchoClient {
 
             ChannelFuture cf = b.connect().sync(); // 异步连接服务器
             System.out.println("服务端连接成功..."); // 连接完成
-//            b.connect().addListener(new ChannelFutureListener() {
-//
-//                @Override
-//                public void operationComplete(ChannelFuture channelFuture) throws Exception {
-//
-//                    if (channelFuture.isSuccess()) {
-//                        channel = channelFuture.channel();
-//                        System.out.println("连接成功");
-//                    } else {
-//                        System.out.println("每隔2s重连....");
-//                        channelFuture.channel().eventLoop().schedule(new Runnable() {
-//
-//                            @Override
-//                            public void run() {
-//                                // TODO Auto-generated method stub
-////                                doConnect();
-//                            }
-//                        }, 2, TimeUnit.SECONDS);
-//                    }
-//                }
-//            });
+            b.connect().addListener(new ChannelFutureListener() {
 
-            cf.channel().closeFuture().sync(); // 异步等待关闭连接channel
-            System.out.println("连接已关闭.."); // 关闭完成
+                @Override
+                public void operationComplete(ChannelFuture channelFuture) throws Exception {
+
+                    if (channelFuture.isSuccess()) {
+                        channel = channelFuture.channel();
+                        System.out.println("连接成功");
+                    } else {
+                        System.out.println("每隔2s重连....");
+                        channelFuture.channel().eventLoop().schedule(new Runnable() {
+
+                            @Override
+                            public void run() {
+                                // TODO Auto-generated method stub
+//                                doConnect();
+                            }
+                        }, 2, TimeUnit.SECONDS);
+                    }
+                }
+            });
+
+//            cf.channel().closeFuture().sync(); // 异步等待关闭连接channel
+//            System.out.println("连接已关闭.."); // 关闭完成
 
         } finally {
             //group.shutdownGracefully().sync(); // 释放线程池资源
