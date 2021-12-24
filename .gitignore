@@ -1,5 +1,4 @@
-/boot/target/
-/elk/target/
+/*/target/
 /META-INF/
-/.idea/*
 /.idea/
+*.iml
