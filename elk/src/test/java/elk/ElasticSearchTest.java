@@ -5,7 +5,6 @@ import com.elk.po.User;
 import com.elk.repository.UserRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.elasticsearch.index.query.MatchAllQueryBuilder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -13,8 +12,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
-import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
-import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @SpringBootTest(classes = App.class)
@@ -62,13 +59,13 @@ public class ElasticSearchTest {
 
     @Test
     public void count(){
-        SearchQuery searchQuery = new NativeSearchQueryBuilder()
-                .withIndices("bank")
-                .withTypes("_doc")
-                .withQuery(new MatchAllQueryBuilder())
-                .build();
-        long count = elasticsearchRestTemplate.count(searchQuery);
-        logger.info("索引es_doc中有{}个文档", count);
+//        SearchQuery searchQuery = new NativeSearchQueryBuilder()
+//                .withIndices("bank")
+//                .withTypes("_doc")
+//                .withQuery(new MatchAllQueryBuilder())
+//                .build();
+//        long count = elasticsearchRestTemplate.count(searchQuery);
+//        logger.info("索引es_doc中有{}个文档", count);
     }
 
 }
